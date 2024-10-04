@@ -11,7 +11,7 @@ interface HeadingProps extends ChakraTextProps {
 
 export function Heading({ children, variant, ...rest }: HeadingProps) {
     const fontSizes = {
-        lg: "2.5rem",
+        lg: "2rem",
         md: "1.5rem",
         sm: "1.125rem",
         xs: "0.875rem",

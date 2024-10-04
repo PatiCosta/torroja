@@ -11,7 +11,7 @@ export function About() {
     return (
         <Flex
             direction={{ base: "column", lg: "row" }}
-            w="100vw"
+            w="100%"
             alignItems="stretch"
             px={{ base: 10, lg: 32 }}
             justifyContent="space-between"
@@ -32,19 +32,13 @@ export function About() {
                 <Text
                     variant={isLg ? "lg" : "sm"}
                     maxW="25rem"
-                    textAlign={{ base: "center", lg: "start" }}
+                    textAlign={{ base: "justify", lg: "start" }}
                 >
-                    Lorem ipsum dolor sit amet consectetur. Ultricies fames
-                    natoque purus odio eu lectus. Vitae id in ipsum condimentum.
-                    Tempus commodo quis ut quam vitae. Suspendisse nisl nunc
-                    pretium libero interdum malesuada. Mollis consequat non
-                    maecenas senectus tristique. Nisl tellus arcu vel semper.
-                    Velit scelerisque sed sagittis commodo. Pellentesque
-                    dictumst nulla sed nisi sit id lacus. Vel dolor in massa
-                    magna in volutpat quis sagittis. Metus eu nec molestie dui
-                    sit ac pellentesque. Vestibulum eget massa consequat lacinia
-                    vitae amet tempus odio. Sed amet rhoncus congue nulla odio
-                    quam felis. Et in amet id risus.
+                    <b>O Studio Torroja</b> é um escritório especializado no desenvolvimento de projetos de estruturas metálicas.
+                    Em nossa abordagem, integramos de forma harmoniosa o projeto arquitetônico com a grandiosidade do projeto estrutural, proporcionando soluções integradas e eficientes.
+                    Com essa abordagem, somos capazes de viabilizar a construção, permitindo que ela concorra em termos de desempenho e qualidade com as edificações tradicionais em concreto.
+                    Sempre destacando a importância do projeto estrutural, buscamos trabalhar com formas exuberantes e inovadoras, que capturam a atenção e a admiração do observador
+
                 </Text>
                 {isLg && (
                     <Button
@@ -55,12 +49,12 @@ export function About() {
                 )}
             </Flex>
             <ProjectPreview
-                variant="md"
-                image="/assets/img/unsplash1.jpg"
+                variant={isLg? "md": "mobileList"}
+                image="/assets/img/mirante-1.jpg"
                 buttonAlign="right"
-                title="Nome do projeto"
-                tags={["tag 1", "tag 2"]}
-                description="Lorem ipsum dolor sit amet consectetur. Leo pretium volutpat tortor nibh placerat. Scelerisque eu pulvinar id eros tristique dolor amet habitasse vestibulum. Convallis arcu fusce viverra turpis."
+                title="Mirante da Cevada"
+                tags={["#EstruturaMetálica", "#SerraDeCamposDoJordão"]}
+                description="Uma bela estrutura metálica inserida em meio à Serra de Campos do Jordão. Este projeto, desenvolvido em conjunto com o escritório Thais Bercovici Arquitetura, concedeu ao Studio Torroja o prêmio Menção Honrosa de 2022, pelo concurso 'Talento Estrutural'. Deseja uma estrutura metálica inovadora como esta? Envie seu projeto para o Studio Torroja!"
             />
             {!isLg && (
                 <Button

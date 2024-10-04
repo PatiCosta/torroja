@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 interface HighlightHeadingProps extends ChakraTextProps {
     children: ReactNode;
-    variant: "lg" | "sm" | "2xs";
+    variant: "lg" | "md" |"sm" | "2xs";
 }
 
 export function HighlightHeading({
@@ -16,12 +16,14 @@ export function HighlightHeading({
 }: HighlightHeadingProps) {
     const fontSizes = {
         lg: "2.5rem",
+        md: "2.25rem",
         sm: "1.5rem",
         "2xs": "1.125rem",
     };
 
     const weights = {
         lg: 400,
+        md: 450,
         sm: 500,
         "2xs": 500,
     };

@@ -44,7 +44,7 @@ export function Main() {
             pt={{ base: 12, lg: 20 }}
             pb={{ base: 12, lg: 32 }}
             gap={12}
-            w="100vw"
+            w="100%"
             direction="column"
         >
             <Flex
@@ -60,16 +60,24 @@ export function Main() {
                 >
                     Projetos verdadeiramente extraordinários
                 </HighlightHeading>
-                <YearTabs selectedYear={selectedYear} changeYear={changeYear} />
+                {/* <YearTabs selectedYear={selectedYear} changeYear={changeYear} /> */}
+
+                {isLg?
+                <Image src='/assets/img/white-dots.png' maxW={'264px'} />
+                :
+                ""
+                }
             </Flex>
             <Flex
                 gap={{ base: 6, lg: 12 }}
+                
                 alignItems="stretch"
                 opacity={isChangingYear ? 0 : 1}
                 transition="opacity 0.3s ease"
-                direction={{ base: "column-reverse", lg: "row" }}
+                direction={{ base: "column", lg: "row" }}
             >
                 <Flex
+                    w='100%'
                     pb={{ base: 4, lg: 8 }}
                     alignItems="start"
                     gap={{ base: 1, lg: 2 }}
@@ -91,12 +99,12 @@ export function Main() {
                 >
                     <Image
                         src={selectedProject.image}
-                        maxH={{ base: "15rem", lg: "28rem" }}
+                        objectFit={'cover'}
                         alt="project"
                     />
-                    <Image
+                    {/* <Image
                         src="/assets/img/unsplash3.jpg"
-                        maxH={{ base: "15rem", lg: "28rem" }}
+                        
                         alt="project"
                     />
                     <Image
@@ -123,10 +131,11 @@ export function Main() {
                         src="/assets/img/unsplash8.jpg"
                         maxH={{ base: "15rem", lg: "28rem" }}
                         alt="project"
-                    />
+                    /> */}
                 </Flex>
                 <Flex
-                    direction="column"
+                    w={['100%','100%','100%','80%']}
+                    direction={'column'}
                     alignItems={{ base: "center", lg: "start" }}
                     justifyContent="space-between"
                     pt={{ base: 0, lg: 12 }}
@@ -163,7 +172,7 @@ export function Main() {
                             ))}
                         </Flex>
                         <Text
-                            variant={isLg ? "lg" : "sm"}
+                            variant={isLg ? "md" : "sm"}
                             textAlign={{ base: "center", lg: "start" }}
                         >
                             {selectedProject.description}
@@ -190,11 +199,11 @@ export function Main() {
                                 onClick={() => {
                                     selectedProjectIndex === 0
                                         ? changeProject(
-                                              projectsOfYear.length - 1,
-                                          )
+                                            projectsOfYear.length - 1,
+                                        )
                                         : changeProject(
-                                              selectedProjectIndex - 1,
-                                          );
+                                            selectedProjectIndex - 1,
+                                        );
                                 }}
                             />
                             <Icon
@@ -209,11 +218,11 @@ export function Main() {
                                 }}
                                 onClick={() => {
                                     selectedProjectIndex ===
-                                    projectsOfYear.length - 1
+                                        projectsOfYear.length - 1
                                         ? changeProject(0)
                                         : changeProject(
-                                              selectedProjectIndex + 1,
-                                          );
+                                            selectedProjectIndex + 1,
+                                        );
                                 }}
                             />
                         </Flex>

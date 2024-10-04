@@ -8,7 +8,7 @@ export function CallToAction() {
 
     return (
         <Box
-            w="100vw"
+            w="100%"
             bgImage="/assets/img/unsplash17.jpg"
             bgSize="cover"
             bgPosition="center"

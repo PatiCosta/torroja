@@ -20,7 +20,7 @@ export function Specialties() {
     return (
         <Flex
             direction={{ base: "column", lg: "row" }}
-            w="100vw"
+            w="100%"
             alignItems="stretch"
             px={{ base: 10, lg: 32 }}
             justifyContent="space-between"
@@ -146,14 +146,7 @@ export function Specialties() {
                         </AccordionButton>
                         <AccordionPanel pb={4} px={{ base: 6, lg: 4 }}>
                             <Text variant={isLg ? "md" : "sm"}>
-                                Nossos projetos de estruturas metálicas são
-                                reconhecidos por sua versatilidade, resistência
-                                e eficiência na construção de uma grande
-                                variedade de edificações. Essas estruturas
-                                proporcionam não apenas agilidade e redução de
-                                custos, mas também a liberdade criativa para
-                                desenvolver projetos inovadores, atendendo às
-                                necessidades de cada cliente com excelência.
+                            A madeira, com sua beleza natural e versatilidade, tem conquistado cada vez mais espaço na arquitetura contemporânea.  Sua aplicação em estruturas  confere aos projetos um toque de aconchego e elegância, além de proporcionar  uma atmosfera acolhedora e integrada à natureza.  A madeira  permite a criação de designs  orgânicos e inovadores,  valorizando a estética e a funcionalidade dos espaços.
                             </Text>
                         </AccordionPanel>
                     </AccordionItem>
@@ -217,12 +210,12 @@ export function Specialties() {
                 </Accordion>
             </Flex>
             <ProjectPreview
-                variant="md"
-                image="/assets/img/unsplash10.jpg"
+                variant={isLg? "md": "mobileList"}
+                image="/assets/img/casa-madeira.jpeg"
                 buttonAlign="right"
-                title="Nome do projeto"
-                tags={["tag 1", "tag 2"]}
-                description="Lorem ipsum dolor sit amet consectetur. Leo pretium volutpat tortor nibh placerat. Scelerisque eu pulvinar id eros tristique dolor amet habitasse vestibulum. Convallis arcu fusce viverra turpis."
+                title="Projeto metálico"
+                tags={["#EstruturaMetálica", "#StudioTorroja"]}
+                description="As estruturas metálicas oferecem aos arquitetos uma liberdade criativa sem igual. A maleabilidade do aço permite a construção de formas complexas e inovadoras,  traduzindo a visão artística em projetos únicos e memoráveis."
             />
         </Flex>
     );

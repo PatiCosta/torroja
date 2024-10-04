@@ -10,7 +10,7 @@ export function Footer() {
 
     return (
         <Flex
-            w="100vw"
+            w="100%"
             px={{ base: 10, lg: 32 }}
             pt={{ base: 12, lg: 20 }}
             pb={8}

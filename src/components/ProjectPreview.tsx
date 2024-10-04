@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Icon, Link, textDecoration, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
 import { Heading } from "./Heading";
 import { Text } from "./Text";
@@ -41,7 +41,7 @@ export function ProjectPreview({
     return (
         <Flex
             bgImage={image}
-            bgPosition="center"
+            bgPosition="top"
             bgSize="cover"
             w={{
                 base: "calc(100vw - 5rem)",
@@ -49,10 +49,10 @@ export function ProjectPreview({
                     variant === "full"
                         ? "100vw"
                         : variant === "md"
-                          ? "calc((100vw/2) - 8rem)"
-                          : "calc((100vw -16rem)/3)",
+                            ? "calc((100vw/2) - 8rem)"
+                            : "calc((100vw -16rem)/3)",
             }}
-            h={{ base: variant === "mobileList" ? 56 : 32, lg: "30rem" }}
+            h={{ base: variant === "mobileList" ? 264 : 32, lg: "30rem" }}
             position="relative"
             py={{
                 base: 0,
@@ -131,14 +131,19 @@ export function ProjectPreview({
                             buttonAlign === "left" ? "row-reverse" : "row"
                         }
                     >
-                        <Subtitle
-                            variant="xl"
-                            opacity={isVisible ? "1" : "0"}
-                            transition="opacity 0.1s ease-out"
-                            mb={1}
+                        <Link
+                            href="/projects"
+                            _hover={{ color: 'teal.400', textDecoration: 'none', transition:"300ms" }}
                         >
-                            ver mais
-                        </Subtitle>
+                            <Subtitle
+                                variant="xl"
+                                opacity={isVisible ? "1" : "0"}
+                                transition="opacity 0.1s ease-out"
+                                mb={1}
+                            >
+                                ver mais
+                            </Subtitle>
+                        </Link>
                         <Icon
                             as={MoveRight}
                             boxSize={6}
@@ -157,7 +162,7 @@ export function ProjectPreview({
                 >
                     <Heading variant="lg">{title}</Heading>
                     <Flex
-                        my={8}
+                        my={6}
                         alignItems="center"
                         justifyContent="start"
                         gap={3}
@@ -182,7 +187,7 @@ export function ProjectPreview({
             {!isLg && (
                 <Flex
                     backdropFilter="blur(8px)"
-                    h={variant === "mobileList" ? "50%" : "100%"}
+                    h={variant === "mobileList" ? "30%" : "100%"}
                     alignItems="stretch"
                     position="absolute"
                     right={buttonAlign === "right" ? 0 : "initial"}
@@ -220,7 +225,7 @@ export function ProjectPreview({
                         py={4}
                         px={4}
                     >
-                        <Heading variant="xs" maxW="4rem">
+                        <Heading variant="xs" maxW={isLg ? "4rem" : "10rem"}>
                             {title}
                         </Heading>
                         <Flex
@@ -228,9 +233,14 @@ export function ProjectPreview({
                             justifyContent="center"
                             gap={2}
                         >
-                            <Subtitle variant="sm" color="silver">
-                                ver mais
-                            </Subtitle>
+                            <Link
+                                href="/projects"
+                                _hover={{ color: 'teal.400', textDecoration: 'none', transition:"300ms" }}
+                            >
+                                <Subtitle variant="sm" color="silver">
+                                    ver mais
+                                </Subtitle>
+                            </Link>
                             <Icon as={MoveRight} boxSize={2} color="silver" />
                         </Flex>
                     </Flex>

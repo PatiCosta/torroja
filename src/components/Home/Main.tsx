@@ -5,7 +5,7 @@ import { Text } from "../Text";
 export function Main() {
     const isLg = useBreakpointValue({ base: false, lg: true });
     return (
-        <Box py={{ base: 12, lg: 20 }} px={{ base: 10, lg: 32 }} w="100vw">
+        <Box py={{ base: 12, lg: 20 }} px={{ base: 10, lg: 32 }} w="100%">
             <Flex
                 direction={{ base: "column", lg: "row" }}
                 alignItems={{ base: "center", lg: "end" }}
@@ -15,7 +15,7 @@ export function Main() {
             >
                 <HighlightHeading
                     maxW="32rem"
-                    variant={isLg ? "lg" : "sm"}
+                    variant={isLg ? "lg" : "md"}
                     textAlign={{ base: "center", lg: "start" }}
                 >
                     Projetando espaços únicos onde cada detalhe importa
@@ -49,38 +49,45 @@ export function Main() {
                 }}
             >
                 <Image
-                    src="/assets/img/unsplash2.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/altalena-1.png"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/unsplash3.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/solar-1.jpg"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/unsplash4.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/aframe-1.png"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/unsplash5.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/reserva-3.jpeg"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/unsplash6.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/reserva-4.jpeg"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/unsplash7.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/altalena-2.png"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/unsplash8.jpg"
-                    maxH={{ base: "12rem", lg: "24rem" }}
+                    src="/assets/img/solar-2.jpg"
+                    h={{ base: "16rem", lg: "24rem" }}
+                    objectFit={'cover'}
                     alt="project"
                 />
             </Flex>

@@ -9,7 +9,7 @@ export function Advantages() {
     return (
         <Flex
             direction={{ base: "column-reverse", lg: "row" }}
-            w="100vw"
+            w="100%"
             alignItems="stretch"
             px={{ base: 10, lg: 32 }}
             justifyContent="space-between"
@@ -140,12 +140,12 @@ export function Advantages() {
                 </Grid>
             )}
             <ProjectPreview
-                variant="md"
-                image="/assets/img/unsplash9.jpg"
+                variant={isLg? "md": "mobileList"}
+                image="/assets/img/atalena-1.jpg"
                 buttonAlign="left"
-                title="Nome do projeto"
-                tags={["tag 1", "tag 2"]}
-                description="Lorem ipsum dolor sit amet consectetur. Leo pretium volutpat tortor nibh placerat. Scelerisque eu pulvinar id eros tristique dolor amet habitasse vestibulum. Convallis arcu fusce viverra turpis."
+                title="Projeto arquitetônico e estrutural"
+                tags={["#Arquitetônico", "#StudioTorroja"]}
+                description="A estrutura metálica oferece diversas vantagens como durabilidade, resistência e  design personalizado. Sustentável e de baixa manutenção,  permite construir vãos livres maiores, criando espaços amplos e flexíveis."
             />
             <Flex
                 direction={{ base: "row", lg: "column" }}

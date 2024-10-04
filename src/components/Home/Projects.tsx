@@ -23,18 +23,19 @@ export function Projects() {
 
     return (
         <Flex
-            w="100vw"
+            w="100%"
             px={{ base: 10, lg: 32 }}
             py={{ base: 12, lg: 20 }}
             direction="column"
             gap={{ base: 8, lg: 12 }}
+
             alignItems="stretch"
         >
             <Box>
                 <Flex
                     alignItems="end"
                     justifyContent="space-between"
-                    mb={{ base: 6, lg: 8 }}
+                    mb={{ base: 1, lg: 8 }}
                     direction={{ base: "column-reverse", lg: "row" }}
                     gap={{ base: 4, lg: 0 }}
                 >
@@ -48,6 +49,7 @@ export function Projects() {
                     </Text>
                     <HighlightHeading
                         variant={isLg ? "lg" : "sm"}
+                        mb={[2,2,2,-16]}
                         maxW="24rem"
                         textAlign={{ base: "center", lg: "start" }}
                     >
@@ -65,10 +67,10 @@ export function Projects() {
                             icon={AlignJustify}
                         />
                     )}
-                    <YearTabs
+                    {/* <YearTabs
                         selectedYear={selectedYear}
                         changeYear={changeYear}
-                    />
+                    /> */}
                 </Flex>
             </Box>
             <Flex
@@ -78,19 +80,37 @@ export function Projects() {
                 transition="opacity 0.3s ease"
                 direction={{ base: "column", lg: "row" }}
             >
-                {projects
+                {/* {projects
                     .filter((project) => project.year === selectedYear)
-                    .map((project) => (
+                    .map((project) => ( */}
                         <ProjectPreview
-                            key={project.title}
+                            key={projects[0].title}
                             variant={isLg ? "sm" : "mobileList"}
-                            image={project.image}
+                            image={projects[0].image}
                             buttonAlign={isLg ? "left" : "right"}
-                            title={project.title}
-                            tags={project.tags}
-                            description={project.description}
+                            title={projects[0].title}
+                            tags={projects[0].tags}
+                            description={projects[0].description}
                         />
-                    ))}
+                        <ProjectPreview
+                            key={projects[1].title}
+                            variant={isLg ? "sm" : "mobileList"}
+                            image={projects[1].image}
+                            buttonAlign={isLg ? "left" : "right"}
+                            title={projects[1].title}
+                            tags={projects[1].tags}
+                            description={projects[1].description}
+                        />
+                        <ProjectPreview
+                            key={projects[2].title}
+                            variant={isLg ? "sm" : "mobileList"}
+                            image={projects[2].image}
+                            buttonAlign={isLg ? "left" : "right"}
+                            title={projects[2].title}
+                            tags={projects[2].tags}
+                            description={projects[2].description}
+                        />
+                    {/* ))} */}
             </Flex>
         </Flex>
     );
