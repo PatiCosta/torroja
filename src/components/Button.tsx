@@ -2,7 +2,7 @@ import {
     Button as ChakraButton,
     ButtonProps as ChakraButtonProps,
     Icon,
-    keyframes,
+    // keyframes,
 } from "@chakra-ui/react";
 import { Subtitle } from "./Subtitle";
 import { ForwardRefExoticComponent, RefAttributes, useState } from "react";
@@ -16,15 +16,15 @@ interface ButtonProps extends ChakraButtonProps {
     variant: "outline" | "fill";
 }
 
-const bounce = keyframes`
-    0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
-	40% {transform: translateX(-10px);}
-	60% {transform: translateX(-5px);}
-`;
+// const bounce = keyframes`
+//     0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+// 	40% {transform: translateX(-10px);}
+// 	60% {transform: translateX(-5px);}
+// `;
 
 export function Button({ text, icon, variant, ...rest }: ButtonProps) {
     const [isHovered, setIsHovered] = useState(false);
-    const bounceAnimation = `${bounce} 2s ease infinite`;
+    // const bounceAnimation = `${bounce} 2s ease infinite`;
 
     return (
         <ChakraButton
@@ -43,6 +43,7 @@ export function Button({ text, icon, variant, ...rest }: ButtonProps) {
             _hover={{
                 bgColor: "red",
                 color: "light",
+                pr:8
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -52,7 +53,7 @@ export function Button({ text, icon, variant, ...rest }: ButtonProps) {
             <Icon
                 as={icon}
                 boxSize={4}
-                animation={isHovered ? bounceAnimation : "none"}
+                // animation={isHovered ? bounceAnimation : "none"}
             />
         </ChakraButton>
     );
