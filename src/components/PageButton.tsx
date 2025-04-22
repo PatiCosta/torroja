@@ -38,9 +38,9 @@ export function PageButton({ path, text }: { path: string; text: string }) {
                 lineHeight={{ base: "2rem", lg: "2.4rem" }}
                 color={
                     path === currentPathname
-                        ? "light"
+                        ? "black"
                         : isHovered
-                          ? "light"
+                          ? "black"
                           : "silver"
                 }
                 transition="color 0.3s ease"

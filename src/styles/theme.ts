@@ -18,10 +18,11 @@ export const theme = extendBaseTheme({
         IconButton,
     },
     colors: {
-        red: "#ef4444",
+        red: "#08699e",
         eerie: "#202222",
         silver: "#b1b1ae",
         light: "#fefefe",
+        grayly: "#d9dade",
     },
     radii: {
         sm: "4px",
@@ -30,9 +31,9 @@ export const theme = extendBaseTheme({
     styles: {
         global: {
             "html, body": {
-                bgColor: "eerie",
+                bgColor: '#d9dade',
                 fontWeight: "500",
-                color: "light",
+                color: "eerie",
                 scrollBehavior: "smooth",
             },
         },

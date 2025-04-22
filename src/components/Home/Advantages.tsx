@@ -15,6 +15,7 @@ export function Advantages() {
             justifyContent="space-between"
             py={{ base: 12, lg: 20 }}
             position="relative"
+            gap={[4,4,4,40]}
         >
             {!isLg && (
                 <Grid
@@ -140,8 +141,8 @@ export function Advantages() {
                 </Grid>
             )}
             <ProjectPreview
-                variant={isLg? "md": "mobileList"}
-                image="/assets/img/atalena-1.jpg"
+                variant={isLg ? "md" : "mobileList"}
+                image="/assets/img/solar-2.jpg"
                 buttonAlign="left"
                 title="Projeto arquitetônico e estrutural"
                 tags={["#Arquitetônico", "#StudioTorroja"]}
@@ -162,7 +163,7 @@ export function Advantages() {
                     bottom: 0,
                     left: 0,
                     borderRadius: "sm",
-                    bgColor: isLg ? "eerie" : "light",
+                    bgColor: isLg ? "grayly" : "light",
                     opacity: isLg ? 0.6 : 0.1,
                     zIndex: -1,
                 }}

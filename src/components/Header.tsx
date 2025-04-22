@@ -8,15 +8,17 @@ export function Header() {
     return (
         <>
             <Flex
+                w='100%'
                 alignItems="center"
                 justifyContent="space-between"
                 mx={{ base: 10, lg: 32 }}
                 pt={12}
+                px={{ base: 10, lg: 32 }}
             >
                 <Image
-                    src="/assets/img/logo.svg"
+                    src="/assets/img/logo-inv.png"
                     alt="logo"
-                    h={{ base: 20, lg: "fit-content" }}
+                    h={{ base: 20, lg: 36 }}
                 />
                 <Flex
                     alignItems={{ base: "end", lg: "center" }}
@@ -24,7 +26,7 @@ export function Header() {
                     gap={{ base: 2, lg: 10 }}
                 >
                     <PageButton path="/" text="Home" />
-                    <PageButton path="/projects" text="Projetos" />
+                    <PageButton path="/sobre" text="Sobre nós" />
                 </Flex>
                 <Flex
                     alignItems="center"
@@ -33,7 +35,7 @@ export function Header() {
                 >
                     <SocialButtons />
                     <Button
-                        variant="outline"
+                        variant="fill"
                         text="Faça seu orçamento"
                         icon={MoveRight}
                     />

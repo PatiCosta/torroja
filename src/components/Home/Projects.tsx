@@ -33,21 +33,13 @@ export function Projects() {
         >
             <Box>
                 <Flex
-                    alignItems="end"
+                    alignItems="start"
                     justifyContent="space-between"
                     mb={{ base: 1, lg: 8 }}
                     direction={{ base: "column-reverse", lg: "row" }}
                     gap={{ base: 4, lg: 0 }}
                 >
-                    <Text
-                        variant={isLg ? "lg" : "sm"}
-                        maxW="34rem"
-                        textAlign={{ base: "center", lg: "start" }}
-                    >
-                        Nosso portfólio reflete o compromisso que temos em
-                        entregar resultados excepcionais aos nossos clientes.
-                    </Text>
-                    <HighlightHeading
+                     <HighlightHeading
                         variant={isLg ? "lg" : "sm"}
                         mb={[2,2,2,-16]}
                         maxW="24rem"
@@ -55,10 +47,19 @@ export function Projects() {
                     >
                         Principais projetos do nosso portfólio
                     </HighlightHeading>
+                    <Text
+                        variant={isLg ? "lg" : "sm"}
+                        maxW="34rem"
+                        textAlign={{ base: "center", lg: "end" }}
+                    >
+                        Nosso portfólio reflete o compromisso que temos em
+                        entregar resultados excepcionais aos nossos clientes.
+                    </Text>
+                   
                 </Flex>
                 <Flex
                     alignItems={{ base: "center", lg: "end" }}
-                    justifyContent={{ base: "center", lg: "space-between" }}
+                    justifyContent={{ base: "center", lg: "end" }}
                 >
                     {isLg && (
                         <Button

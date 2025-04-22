@@ -61,12 +61,6 @@ export function Main() {
                     alt="project"
                 />
                 <Image
-                    src="/assets/img/aframe-1.png"
-                    h={{ base: "16rem", lg: "24rem" }}
-                    objectFit={'cover'}
-                    alt="project"
-                />
-                <Image
                     src="/assets/img/reserva-3.jpeg"
                     h={{ base: "16rem", lg: "24rem" }}
                     objectFit={'cover'}

@@ -7,6 +7,7 @@ import {
 import { Subtitle } from "./Subtitle";
 import { ForwardRefExoticComponent, RefAttributes, useState } from "react";
 import { LucideProps } from "lucide-react";
+import { whatsappLink } from "@/utils";
 
 interface ButtonProps extends ChakraButtonProps {
     text: string;
@@ -28,6 +29,7 @@ export function Button({ text, icon, variant, ...rest }: ButtonProps) {
 
     return (
         <ChakraButton
+            onClick={() => {window.open(whatsappLink(), '_blank', 'noopener,noreferrer')}}
             bgColor={variant === "outline" ? "transparent" : "red"}
             border="1px solid"
             borderColor={variant === "fill" ? "transparent" : "red"}

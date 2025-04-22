@@ -26,6 +26,7 @@ export function Specialties() {
             justifyContent="space-between"
             maxH={{ base: "auto", lg: "30rem" }}
             overflow="hidden"
+            gap={[2,2,2,8,40]}
         >
             <Flex
                 direction="column"
@@ -101,7 +102,7 @@ export function Specialties() {
                         </AccordionPanel>
                     </AccordionItem>
 
-                    <AccordionItem
+                    {/* <AccordionItem
                         borderTop={0}
                         borderBottom="1px solid"
                         borderColor="silver"
@@ -149,7 +150,7 @@ export function Specialties() {
                             A madeira, com sua beleza natural e versatilidade, tem conquistado cada vez mais espaço na arquitetura contemporânea.  Sua aplicação em estruturas  confere aos projetos um toque de aconchego e elegância, além de proporcionar  uma atmosfera acolhedora e integrada à natureza.  A madeira  permite a criação de designs  orgânicos e inovadores,  valorizando a estética e a funcionalidade dos espaços.
                             </Text>
                         </AccordionPanel>
-                    </AccordionItem>
+                    </AccordionItem> */}
 
                     <AccordionItem
                         borderTop={0}
@@ -158,7 +159,7 @@ export function Specialties() {
                     >
                         <AccordionButton
                             py={4}
-                            onClick={() => setOpenedSpecialty(2)}
+                            onClick={() => setOpenedSpecialty(1)}
                             px={{ base: 6, lg: 4 }}
                         >
                             <Subtitle
@@ -211,7 +212,7 @@ export function Specialties() {
             </Flex>
             <ProjectPreview
                 variant={isLg? "md": "mobileList"}
-                image="/assets/img/casa-madeira.jpeg"
+                image="/assets/img/estrutura-panama.png"
                 buttonAlign="right"
                 title="Projeto metálico"
                 tags={["#EstruturaMetálica", "#StudioTorroja"]}

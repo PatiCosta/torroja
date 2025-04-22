@@ -9,14 +9,6 @@ export const projects = [
     },
     {
         year: "2024",
-        image: "/assets/img/aframe-1.png",
-        title: "Chalé A-frame",
-        tags: ["#Chalé", "#EstruturaMetálica"],
-        description:
-            "Projeto modular concebido através da Metodologia Torroja, onde a arquitetura trabalha em harmonia com a estrutura, criando projetos até 30% mais econômicos que os convencionais em aço.",
-    },
-    {
-        year: "2024",
         image: "/assets/img/reserva-4.jpeg",
         title: "Casa da reserva",
         tags: ["#CasaDaReserva", "#Design"],

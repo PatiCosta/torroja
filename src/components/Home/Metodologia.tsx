@@ -6,8 +6,9 @@ import { Heading } from "../Heading";
 import { Text } from "../Text";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import { metodologies } from "@/data/metodologies";
 
-export function Main() {
+export function Metodologia() {
     const [selectedYear, setSelectedYear] = useState("2024");
     const [isChangingYear, setIsChangingYear] = useState(false);
     const [isChangingProject, setIsChangingProject] = useState(false);
@@ -15,11 +16,7 @@ export function Main() {
 
     const isLg = useBreakpointValue({ base: false, lg: true });
 
-    const projectsOfYear = projects.filter(
-        (project) => project.year === selectedYear,
-    );
-
-    const selectedProject = projectsOfYear[selectedProjectIndex];
+    const selectedProject = metodologies[selectedProjectIndex];
 
     function changeYear(year: string) {
         setIsChangingYear(true);
@@ -42,7 +39,7 @@ export function Main() {
         <Flex
             px={{ base: 10, lg: 32 }}
             pt={{ base: 12, lg: 20 }}
-            pb={{ base: 12, lg: 32 }}
+            // pb={{ base: 12, lg: 32 }}
             gap={12}
             w="100%"
             direction="column"
@@ -58,12 +55,12 @@ export function Main() {
                     maxW={{ base: "fit-content", lg: "40rem" }}
                     textAlign={{ base: "center", lg: "start" }}
                 >
-                    Projetos verdadeiramente extraordinários
+                    Metodologia Torroja
                 </HighlightHeading>
                 {/* <YearTabs selectedYear={selectedYear} changeYear={changeYear} /> */}
 
                 {isLg?
-                <Image src='/assets/img/white-dots.png' maxW={'264px'} />
+                <Image src='/assets/img/white-dots.png' maxW={'264px'}/>
                 :
                 ""
                 }
@@ -77,7 +74,7 @@ export function Main() {
                 direction={{ base: "column", lg: "row" }}
             >
                 <Flex
-                    w='100%'
+                    w='50%'
                     pb={{ base: 4, lg: 8 }}
                     alignItems="start"
                     gap={{ base: 1, lg: 2 }}
@@ -102,36 +99,6 @@ export function Main() {
                         objectFit={'cover'}
                         alt="project"
                     />
-                    {/* <Image
-                        src="/assets/img/unsplash3.jpg"
-                        
-                        alt="project"
-                    />
-                    <Image
-                        src="/assets/img/unsplash4.jpg"
-                        maxH={{ base: "15rem", lg: "28rem" }}
-                        alt="project"
-                    />
-                    <Image
-                        src="/assets/img/unsplash5.jpg"
-                        maxH={{ base: "15rem", lg: "28rem" }}
-                        alt="project"
-                    />
-                    <Image
-                        src="/assets/img/unsplash6.jpg"
-                        maxH={{ base: "15rem", lg: "28rem" }}
-                        alt="project"
-                    />
-                    <Image
-                        src="/assets/img/unsplash7.jpg"
-                        maxH={{ base: "15rem", lg: "28rem" }}
-                        alt="project"
-                    />
-                    <Image
-                        src="/assets/img/unsplash8.jpg"
-                        maxH={{ base: "15rem", lg: "28rem" }}
-                        alt="project"
-                    /> */}
                 </Flex>
                 <Flex
                     w={['100%','100%','100%','80%']}
@@ -147,7 +114,7 @@ export function Main() {
                         >
                             {selectedProject.title}
                         </Heading>
-                        <Flex
+                        {/* <Flex
                             mt={{ base: 4, lg: 8 }}
                             mb={{ base: 6, lg: 8 }}
                             alignItems="center"
@@ -170,10 +137,11 @@ export function Main() {
                                     </Text>
                                 </Box>
                             ))}
-                        </Flex>
+                        </Flex> */}
                         <Text
-                            variant={isLg ? "md" : "sm"}
+                            variant={isLg ? "xl" : "sm"}
                             textAlign={{ base: "center", lg: "start" }}
+                            pt={8}
                         >
                             {selectedProject.description}
                         </Text>
@@ -199,7 +167,7 @@ export function Main() {
                                 onClick={() => {
                                     selectedProjectIndex === 0
                                         ? changeProject(
-                                            projectsOfYear.length - 1,
+                                            metodologies.length - 1,
                                         )
                                         : changeProject(
                                             selectedProjectIndex - 1,
@@ -218,7 +186,7 @@ export function Main() {
                                 }}
                                 onClick={() => {
                                     selectedProjectIndex ===
-                                        projectsOfYear.length - 1
+                                        metodologies.length - 1
                                         ? changeProject(0)
                                         : changeProject(
                                             selectedProjectIndex + 1,
@@ -228,15 +196,11 @@ export function Main() {
                         </Flex>
                         <Flex alignItems="end">
                             <HighlightHeading variant={isLg ? "lg" : "sm"}>
-                                0{selectedProjectIndex + 1}
+                                Metodologia {selectedProjectIndex + 1 == 1? 'A':
+                                    selectedProjectIndex + 1 == 2? 'B': 'C'
+                                }
                             </HighlightHeading>
-                            <HighlightHeading
-                                variant={isLg ? "sm" : "2xs"}
-                                color="silver"
-                            >
-                                /0
-                                {projectsOfYear.length}
-                            </HighlightHeading>
+                           
                         </Flex>
                     </Flex>
                 </Flex>

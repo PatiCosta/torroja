@@ -19,14 +19,14 @@ export function Footer() {
         >
             <Box w="100%">
                 <Flex alignItems="center" justifyContent="space-between">
-                    <Image src="/assets/img/logo.svg" alt="logo" />
+                    <Image src="/assets/img/logo-inv.png" alt="logo" maxW={60} />
                     <Flex
                         direction="column"
                         alignItems={{ base: "end", lg: "start" }}
                         gap={2}
                     >
                         <PageButton path="/" text="Home" />
-                        <PageButton path="/projects" text="Projetos" />
+                        <PageButton path="/sobre" text="Sobre nós" />
                     </Flex>
                 </Flex>
                 <Box

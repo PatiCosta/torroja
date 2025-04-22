@@ -41,7 +41,7 @@ export function ProjectPreview({
     return (
         <Flex
             bgImage={image}
-            bgPosition="top"
+            bgPosition="center"
             bgSize="cover"
             w={{
                 base: "calc(100vw - 5rem)",
@@ -133,13 +133,14 @@ export function ProjectPreview({
                     >
                         <Link
                             href="/projects"
-                            _hover={{ color: 'teal.400', textDecoration: 'none', transition:"300ms" }}
+                            _hover={{ color: 'teal.400', textDecoration: 'none', transition: "300ms" }}
                         >
                             <Subtitle
                                 variant="xl"
                                 opacity={isVisible ? "1" : "0"}
                                 transition="opacity 0.1s ease-out"
                                 mb={1}
+                                color={'light'}
                             >
                                 ver mais
                             </Subtitle>
@@ -156,6 +157,7 @@ export function ProjectPreview({
             )}
             {isLg && (
                 <Box
+                    color='light'
                     zIndex={2}
                     opacity={isVisible ? "1" : "0"}
                     transition="opacity 0.4s ease"
@@ -175,7 +177,7 @@ export function ProjectPreview({
                                 bgColor="#ef444430"
                                 borderRadius="sm"
                             >
-                                <Text variant="md" color="silver">
+                                <Text variant="md" color="light">
                                     {tag}
                                 </Text>
                             </Box>
@@ -235,13 +237,13 @@ export function ProjectPreview({
                         >
                             <Link
                                 href="/projects"
-                                _hover={{ color: 'teal.400', textDecoration: 'none', transition:"300ms" }}
+                                _hover={{ color: 'light', textDecoration: 'none', transition: "300ms" }}
                             >
-                                <Subtitle variant="sm" color="silver">
+                                <Subtitle variant="sm" color="white">
                                     ver mais
                                 </Subtitle>
                             </Link>
-                            <Icon as={MoveRight} boxSize={2} color="silver" />
+                            <Icon as={MoveRight} boxSize={2} color="light" />
                         </Flex>
                     </Flex>
                 </Flex>
