@@ -54,7 +54,7 @@ export function About() {
                 buttonAlign="right"
                 title="Mirante da Cevada"
                 tags={["#EstruturaMetálica", "#SerraDeCamposDoJordão"]}
-                description="Uma bela estrutura metálica inserida em meio à Serra de Campos do Jordão. Este projeto, desenvolvido em conjunto com o escritório Thais Bercovici Arquitetura, concedeu ao Studio Torroja o prêmio Menção Honrosa de 2022, pelo concurso 'Talento Estrutural'. Deseja uma estrutura metálica inovadora como esta? Envie seu projeto para o Studio Torroja!"
+                description="TEST Uma bela estrutura metálica inserida em meio à Serra de Campos do Jordão. Este projeto, desenvolvido em conjunto com o escritório Thais Bercovici Arquitetura, concedeu ao Studio Torroja o prêmio Menção Honrosa de 2022, pelo concurso 'Talento Estrutural'. Deseja uma estrutura metálica inovadora como esta? Envie seu projeto para o Studio Torroja!"
             />
             {!isLg && (
                 <Button
