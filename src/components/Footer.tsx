@@ -11,7 +11,7 @@ export function Footer() {
     return (
         <Flex
             w="100%"
-            px={{ base: 10, lg: 32 }}
+            px={{ base: 8, lg: 32 }}
             pt={{ base: 12, lg: 20 }}
             pb={8}
             direction="column"
@@ -19,7 +19,7 @@ export function Footer() {
         >
             <Box w="100%">
                 <Flex alignItems="center" justifyContent="space-between">
-                    <Image src="/assets/img/logo-inv.png" alt="logo" maxW={60} />
+                    <Image src="/assets/img/logo-inv.png" alt="logo" maxW={[40,40,60]} />
                     <Flex
                         direction="column"
                         alignItems={{ base: "end", lg: "start" }}

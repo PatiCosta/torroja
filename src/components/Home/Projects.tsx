@@ -24,7 +24,7 @@ export function Projects() {
     return (
         <Flex
             w="100%"
-            px={{ base: 10, lg: 32 }}
+            px={{ base: 8, lg: 32 }}
             py={{ base: 12, lg: 20 }}
             direction="column"
             gap={{ base: 8, lg: 12 }}

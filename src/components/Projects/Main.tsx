@@ -40,7 +40,7 @@ export function Main() {
 
     return (
         <Flex
-            px={{ base: 10, lg: 32 }}
+            px={{ base: 8, lg: 32 }}
             pt={{ base: 12, lg: 20 }}
             pb={{ base: 12, lg: 32 }}
             gap={12}

@@ -11,7 +11,7 @@ export function Advantages() {
             direction={{ base: "column-reverse", lg: "row" }}
             w="100%"
             alignItems="stretch"
-            px={{ base: 10, lg: 32 }}
+            px={{ base: 8, lg: 32 }}
             justifyContent="space-between"
             py={{ base: 12, lg: 20 }}
             position="relative"

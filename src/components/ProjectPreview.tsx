@@ -4,6 +4,7 @@ import { Heading } from "./Heading";
 import { Text } from "./Text";
 import { Subtitle } from "./Subtitle";
 import { MoveRight } from "lucide-react";
+import { instagramLink } from "@/utils";
 
 interface ProjectPreviewProps {
     buttonAlign: "left" | "right";
@@ -227,7 +228,7 @@ export function ProjectPreview({
                         py={4}
                         px={4}
                     >
-                        <Heading variant="xs" maxW={isLg ? "4rem" : "10rem"}>
+                        <Heading variant="xs" color={'light'} maxW={isLg ? "4rem" : "10rem"}>
                             {title}
                         </Heading>
                         <Flex
@@ -236,7 +237,7 @@ export function ProjectPreview({
                             gap={2}
                         >
                             <Link
-                                href="/projects"
+                                href={instagramLink()}
                                 _hover={{ color: 'light', textDecoration: 'none', transition: "300ms" }}
                             >
                                 <Subtitle variant="sm" color="white">

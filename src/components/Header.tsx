@@ -13,7 +13,7 @@ export function Header() {
                 justifyContent="space-between"
                 mx={{ base: 10, lg: 32 }}
                 pt={12}
-                px={{ base: 10, lg: 32 }}
+                px={{ base: 8, lg: 32 }}
             >
                 <Image
                     src="/assets/img/logo-inv.png"

@@ -5,7 +5,7 @@ import { Text } from "../Text";
 export function Main() {
     const isLg = useBreakpointValue({ base: false, lg: true });
     return (
-        <Box py={{ base: 12, lg: 20 }} px={{ base: 10, lg: 32 }} w="100%">
+        <Box py={{ base: 12, lg: 20 }} px={{ base: 8, lg: 32 }} w="100%">
             <Flex
                 direction={{ base: "column", lg: "row" }}
                 alignItems={{ base: "center", lg: "end" }}

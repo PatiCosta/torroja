@@ -22,7 +22,7 @@ export function Specialties() {
             direction={{ base: "column", lg: "row" }}
             w="100%"
             alignItems="stretch"
-            px={{ base: 10, lg: 32 }}
+            px={{ base: 8, lg: 32 }}
             justifyContent="space-between"
             maxH={{ base: "auto", lg: "30rem" }}
             overflow="hidden"

@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Divider, Flex, Icon, Image, useBreakpointValue } from "@chakra-ui/react";
 import { HighlightHeading } from "../HighlightHeading";
 import { YearTabs } from "../YearTabs";
 import { useState } from "react";
@@ -37,7 +37,7 @@ export function Metodologia() {
 
     return (
         <Flex
-            px={{ base: 10, lg: 32 }}
+            px={{ base: 8, lg: 32 }}
             pt={{ base: 12, lg: 20 }}
             // pb={{ base: 12, lg: 32 }}
             gap={12}
@@ -45,10 +45,11 @@ export function Metodologia() {
             direction="column"
         >
             <Flex
-                alignItems="end"
-                justifyContent="space-between"
+                alignItems={["center", "center", "center", "end", "end"]}
+                justifyContent={["center", "center", "center", "space-between", "space-between"]}
                 direction={{ base: "column", lg: "row" }}
                 gap={{ base: 6, lg: 0 }}
+
             >
                 <HighlightHeading
                     variant={isLg ? "lg" : "sm"}
@@ -59,22 +60,22 @@ export function Metodologia() {
                 </HighlightHeading>
                 {/* <YearTabs selectedYear={selectedYear} changeYear={changeYear} /> */}
 
-                {isLg?
-                <Image src='/assets/img/white-dots.png' maxW={'264px'}/>
-                :
-                ""
+                {isLg ?
+                    <Image src='/assets/img/white-dots.png' maxW={'264px'} />
+                    :
+                    ""
                 }
             </Flex>
             <Flex
                 gap={{ base: 6, lg: 12 }}
-                
+
                 alignItems="stretch"
                 opacity={isChangingYear ? 0 : 1}
                 transition="opacity 0.3s ease"
                 direction={{ base: "column", lg: "row" }}
             >
                 <Flex
-                    w='50%'
+                    w={['100%', '100%', '100%', '50%', '50%']}
                     pb={{ base: 4, lg: 8 }}
                     alignItems="start"
                     gap={{ base: 1, lg: 2 }}
@@ -101,7 +102,7 @@ export function Metodologia() {
                     />
                 </Flex>
                 <Flex
-                    w={['100%','100%','100%','80%']}
+                    w={['100%', '100%', '100%', '80%']}
                     direction={'column'}
                     alignItems={{ base: "center", lg: "start" }}
                     justifyContent="space-between"
@@ -153,7 +154,7 @@ export function Metodologia() {
                         direction={{ base: "row-reverse", lg: "row" }}
                         pt={{ base: 6, lg: 0 }}
                     >
-                        <Flex alignItems="center" gap={4}>
+                        <Flex alignItems="center" gap={4} w={['100%', '100%', 'initial', 'initial', 'initial']} justifyContent={['center', 'center', '', '', '']}>
                             <Icon
                                 as={MoveLeft}
                                 color="eerie"
@@ -174,6 +175,16 @@ export function Metodologia() {
                                         );
                                 }}
                             />
+                            {!isLg && (
+                                <Flex alignItems="end">
+                                    <HighlightHeading variant={isLg ? "lg" : "2xs"}>
+                                        Metodologia {selectedProjectIndex + 1 == 1 ? 'A' :
+                                            selectedProjectIndex + 1 == 2 ? 'B' : 'C'
+                                        }
+                                    </HighlightHeading>
+
+                                </Flex>
+                            )}
                             <Icon
                                 as={MoveRight}
                                 color="eerie"
@@ -194,17 +205,25 @@ export function Metodologia() {
                                 }}
                             />
                         </Flex>
-                        <Flex alignItems="end">
-                            <HighlightHeading variant={isLg ? "lg" : "sm"}>
-                                Metodologia {selectedProjectIndex + 1 == 1? 'A':
-                                    selectedProjectIndex + 1 == 2? 'B': 'C'
-                                }
-                            </HighlightHeading>
-                           
-                        </Flex>
+                        {isLg && (
+
+                            <Flex alignItems="end">
+                                <HighlightHeading variant={isLg ? "lg" : "2xs"}>
+                                    Metodologia {selectedProjectIndex + 1 == 1 ? 'A' :
+                                        selectedProjectIndex + 1 == 2 ? 'B' : 'C'
+                                    }
+                                </HighlightHeading>
+
+                            </Flex>
+                        )}
                     </Flex>
                 </Flex>
             </Flex>
+
+            {!isLg && (
+
+                <Divider orientation="horizontal" h={0.2} w={'100%'} bgColor={'#b0b1b5'} />
+            )}
         </Flex>
     );
 }
