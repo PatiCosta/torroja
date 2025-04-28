@@ -58,7 +58,7 @@ export function Main() {
                     maxW={{ base: "fit-content", lg: "40rem" }}
                     textAlign={{ base: "center", lg: "start" }}
                 >
-                    Projetos verdadeiramente extraordinários
+                    Projetos extraordinários
                 </HighlightHeading>
                 {/* <YearTabs selectedYear={selectedYear} changeYear={changeYear} /> */}
 
